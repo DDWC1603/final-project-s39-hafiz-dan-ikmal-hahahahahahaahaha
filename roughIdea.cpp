@@ -1,16 +1,16 @@
 /*
 
-+	Name
-	Age
-	Gender
-+	Height
-+	Weight
-+	Family Income
-	BMI
+	+	Name
+		Age
+		Gender
+	+	Height
+	+	Weight
+	+	Family Income
+		BMI
 
-(+) : only display
+	(+) : only display
 	
-Compare: Gender
+	Compare: Gender
 		 Age
 		 *BMI
 
@@ -18,8 +18,8 @@ Compare: Gender
 
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <unistd.h>
+#include <string>	// name detection for later use
+#include <unistd.h>	// some arduino func that can be used for this
 
 using namespace std;
 
