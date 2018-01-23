@@ -39,6 +39,11 @@ class Profile {
 		}
 };
 
+// comparison
+void cprofile {
+	// Code here
+}
+
 void body() {
 	int nos;
 	float w, h;
