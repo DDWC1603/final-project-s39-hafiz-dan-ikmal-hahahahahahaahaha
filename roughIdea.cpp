@@ -1,47 +1,43 @@
 /*
-
-	+	Name
-		Age
-		Gender
-	+	Height
-	+	Weight
-	+	Family Income
-		BMI
-
-	(+) : only display
-	
-	Compare: Gender
+		+Name
 		 Age
-		 *BMI
+		 Gender
+		+Height
+		+Weight
+		+Family Income
+		 BMI
 
+(+) : only display
+	
+		Compare: Gender
+			 Age
+		 	 BMI (if possible)
 */
 
 #include <iostream>
 #include <fstream>
+//#include <ostream>
+//#include <iomanip>
 #include <string>	// name detection for later use
 #include <unistd.h>	// some arduino func that can be used for this
+//#include <stdlib.h>
 
 using namespace std;
 
-class Profile {
-	public:
+//class Profile {
+struct Profile {
 		string name;
 		int gender, age;
 		float weight, height;
+
+		float test() {return (weight + height);}
 		
-		
-		float test() {			
-			return (weight + height);
-		}
-		
-		float bmi() {			
-			return (weight / (height*height));
-		}
+		float bmi() {return (weight / (height*height));}
 };
 
 // comparison
 void cprofile {
-	// Code here
+	// put testlin.cpp here
 }
 
 void body() {
@@ -54,7 +50,8 @@ void body() {
 	
 	for (int i=0; i<nos; i++) {
 		cout << "Name: ";
-		cin >> user.name;
+		getline(cin, user.name);
+		//cin >> user.name;
 		
 		cout << "Gender: ";
 		cin >> user.gender;
@@ -63,12 +60,14 @@ void body() {
 		cin >> user.age;
 		
 		cout << "Weight: ";
-		cin >> w;
-		user.weight = w;
+		cin >> user.weight;
+		//cin >> w;
+		//user.weight = w;
 		
 		cout << "Height: ";
-		cin >> h;
-		user.height = h;
+		cin >> user.height;
+		//cin >> h;
+		//user.height = h;
 		
 		cout << endl << "Your BMI: " << user.bmi();
 		
