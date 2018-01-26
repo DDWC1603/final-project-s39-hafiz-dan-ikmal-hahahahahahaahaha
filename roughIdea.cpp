@@ -27,7 +27,8 @@ using namespace std;
 //class Profile {
 struct Profile {
 		string name;
-		int gender, age;
+		/*bool*/ int gender;
+		int age;
 		float weight, height;
 
 		float test() {return (weight + height);}
