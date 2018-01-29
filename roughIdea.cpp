@@ -27,52 +27,74 @@ using namespace std;
 //class Profile {
 struct Profile {
 		string name;
-		/*bool*/ int gender;
+		bool gender;
 		int age;
 		float weight, height;
 
 		float test() {return (weight + height);}
 		
 		float bmi() {return (weight / (height*height));}
+		
+		void info() {
+			cout << endl << "Name: " << name;
+			cout << endl << "Gender: " << gender;
+			cout << endl << "Age: " << age;
+			cout << endl << "Weight: " << weight;
+			cout << endl << "Height: " << height;
+			cout << endl << "BMI: " << bmi();
+		}
 };
 
 // comparison
+/*
 void cprofile {
 	// put testlin.cpp here
 }
+*/
 
 void body() {
 	int nos;
-	float w, h;
-	Profile user;
+	char g;
+	Profile user[10];
 	
 	cout << "Number of Student: ";
 	cin >> nos;
 	
 	for (int i=0; i<nos; i++) {
 		cout << "Name: ";
-		getline(cin, user.name);
-		//cin >> user.name;
+		//getline(cin, user.name);
+		cin >> user[i].name;
 		
-		cout << "Gender: ";
-		cin >> user.gender;
+		cout << "M - Male / F - Female" << endl << "Gender: ";
+		cin >> g;
 		
+		if (g == 'm') {
+			user[i].gender = false;
+		}
+
+		else if (g == 'f') {
+			user[i].gender = true;
+		}
+		
+		else {
+			cout << endl << "bodo";
+		}
+					
 		cout << "Age: ";
-		cin >> user.age;
-		
+		cin >> user[i].age;
+			
 		cout << "Weight: ";
-		cin >> user.weight;
-		//cin >> w;
-		//user.weight = w;
+		cin >> user[i].weight;
 		
 		cout << "Height: ";
-		cin >> user.height;
-		//cin >> h;
-		//user.height = h;
+		cin >> user[i].height;
 		
-		cout << endl << "Your BMI: " << user.bmi();
+		cout << endl << "Your BMI: " << user[i].bmi();
 		
-		sleep(3);
+		cout << endl << "Your Profile: " << endl;
+		user[i].info();
+		
+		sleep(10);
 		system("cls");
 	}
 }
