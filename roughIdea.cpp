@@ -53,17 +53,17 @@ void cprofile {
 */
 
 void body() {
-	int nos;
+	int nos = 120;
 	char g;
-	Profile user[10];
+	Profile user[120];
 	
-	//cout << "Number of Student: ";	clash with user.name;
+	//cout << "Number of Student: ";
 	//cin >> nos;
 	
 	for (int i=0; i<nos; i++) {
 		cout << "Name: ";
-		//getline(cin, user.name);
-		cin >> user[i].name;
+		getline(cin, user[i].name);
+		//cin >> user[i].name;
 		
 		cout << "M - Male / F - Female" << endl << "Gender: ";
 		cin >> g;
