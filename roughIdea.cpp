@@ -57,8 +57,8 @@ void body() {
 	char g;
 	Profile user[10];
 	
-	cout << "Number of Student: ";
-	cin >> nos;
+	//cout << "Number of Student: ";	clash with user.name;
+	//cin >> nos;
 	
 	for (int i=0; i<nos; i++) {
 		cout << "Name: ";
