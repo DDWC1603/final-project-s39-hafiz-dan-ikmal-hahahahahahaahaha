@@ -43,7 +43,8 @@ int main() {
 			cout<<"BODOH";	
 		}
 	}
-		
+	
+	// data will decay
 	for(int y=0; y<cm; y++) {
 		user[y].gender = false;
 		user[y].apaapanama();
